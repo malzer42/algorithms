@@ -55,7 +55,9 @@ int main(int argc, char** argv) {
     subscript = linearSearch(b, size, key);
         
     std::cout <<"\nPrinting the elt of the array with the key: " << b[subscript] << '\n';
-        
+
+    std::cout << "\nProgram Ended Successfully!\n\n";
+    
     return 0;
   }
   catch(...){
