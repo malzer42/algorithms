@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/algorithms.h
+iostream
+-
+
+/home/pi/tds/cpp/algorithms/src/algorithms.cpp
+algorithms.h
+/home/pi/tds/cpp/algorithms/src/algorithms.h
+
+/home/pi/tds/cpp/algorithms/src/main.cpp
+iostream
+-
+algorithm
+-
+array
+-
+algorithms.h
+/home/pi/tds/cpp/algorithms/src/algorithms.h
+
