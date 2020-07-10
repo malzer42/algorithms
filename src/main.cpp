@@ -46,12 +46,15 @@ int main(int argc, char** argv) {
       std::cout << b[i] << ' ';
     }
         
-    int key = 7;
+    int key = 0;
     int subscript = 0;
+
+    std::cout <<"\nEnter the key to search: ... ? ";
+    std::cin >> key;
         
     subscript = linearSearch(b, size, key);
         
-    std::cout <<"Printing the elt of the array with the key: " << b[subscript] << '\n';
+    std::cout <<"\nPrinting the elt of the array with the key: " << b[subscript] << '\n';
         
     return 0;
   }
@@ -60,6 +63,3 @@ int main(int argc, char** argv) {
   }
 }
 
-    }
-  }
-}

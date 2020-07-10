@@ -47,7 +47,4 @@ void swap(int& x, int& y){
   y = tmp;
 }
 
-      }"]"
-    }
-  }
-}
+
