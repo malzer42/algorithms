@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   main.cpp
- * Author: Pierre Abraham Mulamba
- *
- * Created on 9 July 2020, 12 h 34
+/**
+ * File: main.cpp
+ * Author(s): Pierre Abraham Mulamba
+ * Date creation (modification): 20200709 (20200710)
+ * Description: Driver
+ * Compulation: 
+ * 1.type cmake .. from the build directory
+ * 2. make
+ * Usage: ./algorithms
  */
 
 #include <iostream>
@@ -17,9 +15,7 @@
 
 #include "algorithms.h"
 
-/*
- * 
- */
+
 int main(int argc, char** argv) {
   try{
     std::cout << "Program to test various algorithms\n";
@@ -38,6 +34,39 @@ int main(int argc, char** argv) {
     for(int i = 0; i < 10; i++){
       std::cout << b[i] << ' ';
     }
+
+    int key = 0;
+    int subscript = 0;
+
+    std::cout << "\nTesting the binary search algorithm on an unsorted list\n";
+
+    std::cout << "\nEnter a key to search an unsorted array using the binary search algorithm: ... ? ";
+    std::cin >> key;
+        
+    subscript = binarySearch(b, size, key);
+
+    if (subscript < 0)
+    {
+	std::cout << "\nThe array does not contain a value that matches: " << key << '\n';	
+    }
+    else{
+	std::cout << "Printing the value of the array  that matched the key value: " << key << " array element: " << subscript << '\n';
+    }
+    
+    
+    std::cout << "\nEnter a key to search the array using the linear search algorithm: ... ? ";
+    std::cin >> key;
+        
+    subscript = linearSearch(b, size, key);
+
+    if (subscript < 0)
+    {
+	std::cout << "\nThe array does not contain a value that matches: " << key << '\n';	
+    }
+    else{
+	std::cout << "Printing the value of the array  that matched the key value: " << key << " array element: " << subscript << '\n';
+    }
+    
         
     bubbleSort(b, size);
         
@@ -46,16 +75,19 @@ int main(int argc, char** argv) {
       std::cout << b[i] << ' ';
     }
         
-    int key = 0;
-    int subscript = 0;
-
-    std::cout <<"\nEnter the key to search: ... ? ";
+    std::cout <<"\nEnter the key to search using the binary search algorithm: ... ? ";
     std::cin >> key;
         
-    subscript = linearSearch(b, size, key);
-        
-    std::cout <<"\nPrinting the elt of the array with the key: " << b[subscript] << '\n';
+    subscript = binarySearch(b, size, key);
 
+    if (subscript < 0)
+    {
+	std::cout << "\nThe array does not contain a value that matches: " << key << '\n';	
+    }
+    else{
+	std::cout << "Printing the value of the array  that matched the key value: " << key << " array element: " << subscript << '\n';
+    }
+    
     std::cout << "\nProgram Ended Successfully!\n\n";
     
     return 0;

@@ -24,6 +24,7 @@ void bubbleSort(int a[], int size);
 
 /**
  * linear search algorithm
+ * used in case of an unsorted array
  * @param a
  * @param size
  * @param key
@@ -32,6 +33,9 @@ int linearSearch(int a[], int size, int key);
 
 /**
  * binary search algorithm
+ * used for a sorted array.
+ * If an array is not sorted we first the array 
+ * before using the binary search algorithm
  * @param a
  * @param size
  * @param key
